@@ -41,7 +41,8 @@ __all__ = ['FCWB', 'IBN', 'IBNWB', 'IS2', 'JFRC2', 'T1', 'Dmel', 'DsecI',
            "MANC", "MANCraw",
            'DmelL1CNS_Seymour',
            'COURT2017VNS', 'COURT2018VNS',
-           'register_templates']
+           'register_templates',
+           'PK_L1CNS']
 
 # Read in meta data
 fp = os.path.dirname(__file__)
@@ -1109,6 +1110,14 @@ class _DmelL1CNS_Seymour(FlyTemplateBrain):
 
 DmelL1CNS_Seymour = _DmelL1CNS_Seymour(**template_meta['Dmel-L1-CNS-Seymour'])
 
+class _PK_L1CNS(FlyTemplateBrain):
+    """ 
+    L1 CNS volume from CATMAID. 
+    Dataset originally imaged and assembled by Rick Fetter and Albert Cardona.
+    """
+
+PK_L1CNS = _PK_L1CNS(**template_meta['PK_L1CNS'])
+
 
 def register_templates():
     """Register template brains with navis."""
@@ -1121,7 +1130,7 @@ def register_templates():
                  JRCFIB2018F, JRCFIB2018Fraw,
                  FANC, MANC, MANCraw,
                  DmelL1CNS_Seymour,
-                 COURT2017VNS, COURT2018VNS]
+                 COURT2017VNS, COURT2018VNS, PK_L1CNS]
 
     for tmp in templates:
         transforms.registry.register_templatebrain(tmp, skip_existing=True)

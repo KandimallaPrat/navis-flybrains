@@ -1089,5 +1089,38 @@
          62793
       ],
       "doi": "10.1101/2023.06.05.543757"
+   },
+{
+      "name": "D. melanogaster L1 CNS",
+      "label": "PK_L1CNS",
+      "type": null,
+      "sex": "female",
+      "dims": null,
+      "voxdims": [
+         3.8,
+         3.8,
+         50
+      ],
+      "origin": [
+         0.0,
+         0.0,
+         0.0
+      ],
+      "units": [
+         "nanometers",
+         "nanometers",
+         "nanometers"
+      ],
+      "_navis_units": "1 nanometer",
+      "description": "VH|PK : CNS ssTEM at 3.8x3.8x50 nm of whole 1st instar larval CNS.",
+      "doi": null,
+      "boundingbox": [
+         939,
+         105096,
+         1717,
+         119252,
+         6464,
+         246630
+      ]
    }
 ]

@@ -562,10 +562,8 @@ def register_transforms():
     # Adding a simple mirror FOR L1 BRAIN Left and Right
     fp = os.path.join(data_filepath, 'PK_L1CNS_mirror_landmarks.csv')
     lm = pd.read_csv(fp)
-    #tr = transforms.TPStransform(lm[['rflip_x', 'rflip_y', 'rflip_z']].values,
-    #                             lm[['l_x', 'l_y', 'l_z']].values)
     tr = transforms.TPStransform(lm[['src_x', 'src_y', 'src_z']].values,
-                                 lm[['trg_x', 'trg_y', 'trg_z']].values)
+                                   lm[['trg_x', 'trg_y', 'trg_z']].values)
     transforms.registry.register_transform(transform=tr,
                                            source='PK_L1CNS',
                                            target=None,

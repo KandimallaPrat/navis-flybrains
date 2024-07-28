@@ -137,6 +137,7 @@ Most templates come with a mesh e.g. for plotting via navis:
 
 ## Changes
 - `0.2.9` (2024/01/06): [@KandimallaPrat](https://github.com/KandimallaPrat) added L1 CNS mesh and the left/right mirror transform (warp)
+- `0.2.10` (2024/07/28): [@KandimallaPrat](https://github.com/KandimallaPrat) fixed error point (incorrectly in right-hemisphere) in left/right mirror transform (warp) of the L1 CNS mesh
 
 ## Acknowledgements
 `navis-flybrains` is critically based on `nat.flybrains` and `nat.jrcbrains` by Greg Jefferis

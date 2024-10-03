@@ -559,7 +559,7 @@ def register_transforms():
                                            target='FANC',
                                            transform_type='bridging')
 
-    # Adding a simple mirror FOR L1 BRAIN Left and Right
+    # Adding a simple mirror For L1 CNS
     fp = os.path.join(data_filepath, 'PK_L1CNS_mirror_landmarks.csv')
     lm = pd.read_csv(fp)
     tr = transforms.TPStransform(lm[['src_x', 'src_y', 'src_z']].values,
@@ -568,3 +568,13 @@ def register_transforms():
                                            source='PK_L1CNS',
                                            target=None,
                                            transform_type='mirror')
+
+    # Add a simple symmetrization transform for L1 CNS
+    fp = os.path.join(data_filepath, 'PK_L1CNS_symmetry_landmarks.csv')
+    lm = pd.read_csv(fp)
+    tr = transforms.TPStransform(lm[['x', 'y', 'z']].values,
+                                 lm[['x_sym', 'y_sym', 'z_sym']].values)
+    transforms.registry.register_transform(transform=tr,
+                                           source='PK_L1CNS',
+                                           target='PK_L1CNSsym',
+                                           transform_type='bridging')

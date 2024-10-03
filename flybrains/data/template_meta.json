@@ -1122,5 +1122,40 @@
          6464,
          246630
       ]
+   },
+{
+      "name": "D. melanogaster L1 CNS",
+      "label": "PK_L1CNSsym",
+      "type": null,
+      "sex": "female",
+      "dims": null,
+      "voxdims": [
+         3.8,
+         3.8,
+         50
+      ],
+      "origin": [
+         0.0,
+         0.0,
+         0.0
+      ],
+      "units": [
+         "nanometers",
+         "nanometers",
+         "nanometers"
+      ],
+      "_navis_units": "1 nanometer",
+      "description": "VH|PK : Symmetrized CNS ssTEM at 3.8x3.8x50 nm of whole 1st instar larval CNS.",
+      "doi": null,
+      "boundingbox": [
+         942.5,
+         102607.1,
+         1736.9,
+         118554.1,
+         6469.4,
+         246167.5
+      ]
    }
+
+
 ]

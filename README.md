@@ -140,6 +140,7 @@ Most templates come with a mesh e.g. for plotting via navis:
 - `0.2.10` (2024/07/28): [@KandimallaPrat](https://github.com/KandimallaPrat) fixed error point (incorrectly in right-hemisphere) in left/right mirror transform (warp) of the L1 CNS mesh
 - `0.2.11` (2024/10/02): [@KandimallaPrat](https://github.com/KandimallaPrat) improved left/right registration with VNC points in the L1 CNS. Also generated symmetric registration (right default).
 - - `0.2.11` (2025/07/06): [@KandimallaPrat](https://github.com/KandimallaPrat) updated left/right registration with SEZ s-bundle points in the L1 CNS. Also generated corresponding symmetric registration (right default).
+- - `0.2.11` (2025/10/22): [@KandimallaPrat](https://github.com/KandimallaPrat) added raw and symmetrized L1 central brain neuropil volumes.
 
 ## Acknowledgements
 `navis-flybrains` is critically based on `nat.flybrains` and `nat.jrcbrains` by Greg Jefferis

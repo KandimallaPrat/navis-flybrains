@@ -42,7 +42,8 @@ __all__ = ['FCWB', 'IBN', 'IBNWB', 'IS2', 'JFRC2', 'T1', 'Dmel', 'DsecI',
            'DmelL1CNS_Seymour',
            'COURT2017VNS', 'COURT2018VNS',
            'register_templates',
-           'PK_L1CNS', 'PK_L1CNSsym']
+           'PK_L1CNS', 'PK_L1CNSsym',
+           'PK_L1CBNeuropil', 'PK_L1CBNeuropilsym']
 
 # Read in meta data
 fp = os.path.dirname(__file__)
@@ -1126,6 +1127,22 @@ class _PK_L1CNSsym(FlyTemplateBrain):
 
 PK_L1CNSsym = _PK_L1CNSsym(**template_meta['PK_L1CNSsym'])
 
+class _PK_L1CBNeuropil(FlyTemplateBrain):
+    """ 
+    L1 Central Brain Neuropil volume from CATMAID. 
+    Dataset originally imaged and assembled by Rick Fetter and Albert Cardona.
+    """
+
+PK_L1CBNeuropil = _PK_L1CBNeuropil(**template_meta['PK_L1CBNeuropil'])
+
+class _PK_L1CBNeuropilsym(FlyTemplateBrain):
+    """ 
+    L1 Central Brain Neuropil Symmetrized volume from CATMAID.
+    Dataset originally imaged and assembled by Rick Fetter and Albert Cardona.
+    """
+
+PK_L1CBNeuropilsym = _PK_L1CBNeuropilsym(**template_meta['PK_L1CBNeuropilsym'])
+
 
 def register_templates():
     """Register template brains with navis."""
@@ -1138,7 +1155,8 @@ def register_templates():
                  JRCFIB2018F, JRCFIB2018Fraw,
                  FANC, MANC, MANCraw,
                  DmelL1CNS_Seymour,
-                 COURT2017VNS, COURT2018VNS, PK_L1CNS, PK_L1CNSsym]
+                 COURT2017VNS, COURT2018VNS, PK_L1CNS, PK_L1CNSsym,
+                 PK_L1CBNeuropil, PK_L1CBNeuropilsym]
 
     for tmp in templates:
         transforms.registry.register_templatebrain(tmp, skip_existing=True)
